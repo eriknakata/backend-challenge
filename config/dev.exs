@@ -8,7 +8,7 @@ use Mix.Config
 # with brunch.io to recompile .js and .css sources.
 config :zx, ZxWeb.Endpoint,
   http: [port: 4000],
-  debug_errors: true,
+  debug_errors: false,
   code_reloader: true,
   check_origin: false,
   watchers: []
@@ -40,8 +40,8 @@ config :phoenix, :stacktrace_depth, 20
 config :zx, Zx.Repo,
   adapter: Ecto.Adapters.Postgres,
   types: Zx.PostgresTypes,
-  username: "postgres",
-  password: "postgres",
+  username: System.get_env("DB_USERNAME"),
+  password: System.get_env("DB_PASSWORD"),
   database: "zx_dev",
-  hostname: "localhost",
+  hostname: System.get_env("DB_HOST"),
   pool_size: 10
