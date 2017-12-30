@@ -15,7 +15,7 @@ services:
     depends_on:
       - postgres
   postgres:
-    image: mdillon/postgis
+    image: mdillon/postgis:10-alpine
     volumes:
        - db_data:/var/lib/postgresql/data
     environment:

@@ -1,4 +1,4 @@
-FROM elixir:1.5.3
+FROM elixir:1.5.3-alpine
 
 RUN mix local.hex --force
 
@@ -9,4 +9,4 @@ COPY . /app
 WORKDIR /app
 
 RUN mix deps.get
-CMD mix phoenix.server  
+CMD mix phx.server  
