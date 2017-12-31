@@ -11,7 +11,7 @@ Installation
 
  2. Clone the repository code
  3. Navigate to the source code folder and type: `$ docker-compose build`
- 4. `$ docker-compose up up`
+ 4. `$ docker-compose up`
 
 The API is ready on address [http://localhost:4000/api](http://localhost:4000/api)
 
@@ -22,7 +22,7 @@ Tests
 
 ```json
 {
-"trading_name": "Adega da Cerveja - Pinheiros",
+ "trading_name": "Adega da Cerveja - Pinheiros",
  "owner_name": "Zé da Silva",
  "document": "81355398000180",
  "coverage_area": { 
