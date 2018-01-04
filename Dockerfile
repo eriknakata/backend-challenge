@@ -9,4 +9,4 @@ COPY . /app
 WORKDIR /app
 
 RUN mix deps.get
-CMD mix phx.server  
+CMD mix do ecto.create, ecto.migrate, phx.server
