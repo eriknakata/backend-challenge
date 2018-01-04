@@ -11,16 +11,9 @@ Installation
 
  2. Clone the repository code
  3. Navigate to the source code folder and type: `$ docker-compose build`
- 4. `$ docker-compose up -d postgres`
- 5. `$ docker-compose run phoenix mix ecto.create`
- 6. `$ docker-compose run phoenix mix ecto.migrate`
- 7. `$ docker-compose run phoenix`
+ 4. `$ docker-compose up`
 
 The API is ready on address [http://localhost:4000/api](http://localhost:4000/api)
-
-> **Note:**
-
-> - In a production environment the CI server is responsible for run the migration before run the app, so the steps above would be simple such as `docker-compose up`
 
 ----------
 Tests
@@ -29,20 +22,20 @@ Tests
 
 ```json
 {
-	"tradingName": "Adega da Cerveja - Pinheiros",
-	"ownerName": "Zé da Silva",
-	"document": "14321321238910001",
-	"coverageArea": { 
-		"type": "MultiPolygon", 
-		"coordinates": [
-			[[[30, 20], [45, 40], [10, 40], [30, 20]]], 
-			[[[15, 5], [40, 10], [10, 20], [5, 10], [15, 5]]]
-		]
-	},
-	"address": { 
-	"type": "Point",
-	"coordinates": [-46.57421, -21.785741]
-	}
+ "trading_name": "Adega da Cerveja - Pinheiros",
+ "owner_name": "Zé da Silva",
+ "document": "81355398000180",
+ "coverage_area": { 
+  "type": "MultiPolygon", 
+  "coordinates": [
+	  [[[30, 20], [45, 40], [10, 40], [30, 20]]], 
+	  [[[15, 5], [40, 10], [10, 20], [5, 10], [15, 5]]]
+   ]
+  },
+ "address": { 
+  "type": "Point",
+  "coordinates": [-46.57421, -21.785741]
+ }
 }
 ```    
   
